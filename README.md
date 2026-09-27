@@ -24,8 +24,9 @@ Neste repositório, você encontrará todo o material produzido e estudado duran
 
 ```text
 ufpel-ai-training/
-├── 📝 exercises/       # Exercícios práticos e experimentações
-├── 🚀 projects/        # Projetos mais robustos e provas de conceito (PoCs)
+├── 📝 exercises/       # Exercícios práticos e experimentações.
+├── 📝 notebook/       # Caderno de laboratório.
+├── 🚀 projects/        # Projetos mais robustos e provas de conceito (PoCs).
 ```
 
 <hr/>
@@ -43,5 +44,5 @@ Durante o treinamento, utilizamos diversas ferramentas modernas do ecossistema d
 Desenvolvido com ☕ e muita dedicação por:
 
 **Nicolas Mattozo Ciriaco**  
-🎓 *Graduando em Ciência da Computação - UFPel*  
+🎓 _Graduando em Ciência da Computação - UFPel_  
 🐙 [GitHub](https://github.com/NicolasMattozo) | 💼 [LinkedIn](https://www.linkedin.com/in/nicolas-mattozo)
