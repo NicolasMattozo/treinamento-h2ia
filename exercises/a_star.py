@@ -6,6 +6,14 @@ estado_final = [[1, 2, 3], [4, 5, 6], [7, 8, 0]]
 movimentos = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 explorados = set()
 
+class No:
+    def __init__(self, estado_atual, acao, pai, g, h=0, f=0):
+        self.estado_atual = estado_atual
+        self.acao = acao
+        self.pai = pai
+        self.g = g
+        self.h = h
+        self.f = f
 
 def calcular_heuristica(tabuleiro):
     distancia = 0
@@ -17,16 +25,6 @@ def calcular_heuristica(tabuleiro):
                 coluna_objetivo = (valor - 1) % 3
                 distancia += abs(i - linha_objetivo) + abs(j - coluna_objetivo)
     return distancia
-
-
-class No:
-    def __init__(self, estado_atual, acao, pai, g, h, f):
-        self.estado_atual = estado_atual
-        self.acao = acao
-        self.pai = pai
-        self.g = g
-        self.h = h
-        self.f = f
 
 
 def abrir_No(no_pai, movimentos):
@@ -112,8 +110,9 @@ while no is not None:
 
 passos = len(caminho) - 1
 
-print(passos)
-print(estados_expandidos)
+print("Passos", passos)
+print("Estados Expandidos", estados_expandidos)
+print("\n")
 
 for tabuleiro, direcao in zip(caminho[::-1], direcoes[::-1]):
     if direcao is not None:

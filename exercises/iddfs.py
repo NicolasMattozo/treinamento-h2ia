@@ -1,7 +1,7 @@
 import copy
 import heapq
 
-estado_inicial =  [[1,0,3],[4,5,6],[7,8,2]]
+estado_inicial = [[1, 0, 3], [4, 5, 6], [7, 8, 2]]
 estado_final =  [[1,2,3],[4,5,6],[7,8,0]]
 movimentos = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
@@ -61,7 +61,7 @@ def IDDFS(tabuleiro):
 
       if(no_atual.estado_atual == estado_final):
 
-        return no_atual
+        return no_atual, explorados
 
       else:
 
@@ -76,7 +76,7 @@ def IDDFS(tabuleiro):
 
 
 
-vencedor = IDDFS(estado_inicial)
+vencedor, explorados = IDDFS(estado_inicial)
 
 no = vencedor
 caminho = []
@@ -91,8 +91,8 @@ while (no != None):
 
 passos = len(caminho) - 1
 
-print(passos)
-print(len(explorados)-1)
+print("Passos", passos)
+print("Estados Expandidos", len(explorados)-1)
 
 for tabuleiro, direcao in zip(caminho[::-1], direcoes[::-1]):
 
@@ -103,4 +103,3 @@ for tabuleiro, direcao in zip(caminho[::-1], direcoes[::-1]):
         print(linha)
 
     print("-" * 15)
-

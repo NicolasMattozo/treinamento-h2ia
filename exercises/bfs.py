@@ -1,7 +1,7 @@
 import copy
 import heapq
 
-estado_inicial =  [[1,0,3],[4,5,6],[7,8,2]]
+estado_inicial = [[1, 0, 3], [4, 5, 6], [7, 8, 2]]
 estado_final =  [[1,2,3],[4,5,6],[7,8,0]]
 movimentos = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 explorados = set()
@@ -46,6 +46,8 @@ def abrir_No(no_pai, movimentos):
 
 
 def BFS(tabuleiro):
+  global explorados
+  explorados = set() # Limpa o conjunto para novas buscas
 
   inicio = No(tabuleiro, None, None, 0)
 
@@ -95,4 +97,3 @@ for tabuleiro, direcao in zip(caminho[::-1], direcoes[::-1]):
         print(linha)
 
     print("-" * 15)
-
