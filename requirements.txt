@@ -1,0 +1,24 @@
+# Núcleo de Computação Científica e Dados
+numpy>=1.26.0
+pandas>=2.2.0
+scipy>=1.12.0
+scikit-learn>=1.4.0
+
+# Visualização de Dados
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Suporte a Notebooks e Execução Interativa
+ipykernel>=6.29.0
+ipywidgets>=8.1.0
+jupyterlab>=4.1.0
+notebook>=7.1.0
+
+# Ferramentas Auxiliares e Produtividade
+tqdm>=4.66.0
+rich>=13.7.0
+requests>=2.31.0
+
+# Qualidade de Código (Linting & Formatting)
+ruff>=0.4.0
+pytest>=8.0.0

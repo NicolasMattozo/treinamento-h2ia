@@ -1,0 +1,49 @@
+[project]
+name = "ufpel-ai-training"
+version = "0.1.0"
+description = "Códigos, resoluções de exercícios e anotações do treinamento em IA (H2IA/UFPel)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "ipykernel>=6.29.0",
+    "ipywidgets>=8.1.0",
+    "jupyterlab>=4.1.0",
+    "matplotlib>=3.8.0",
+    "notebook>=7.1.0",
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "rich>=13.7.0",
+    "scikit-learn>=1.4.0",
+    "scipy>=1.12.0",
+    "seaborn>=0.13.0",
+    "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.4.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort (import sorting)
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501", # line too long (handled by formatter)
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
